@@ -1,6 +1,6 @@
 # Manim Algebra 2
 
-![Manim Algebra 2 Logo](https://github.com/zulujive/algebra2/blob/master/Manim_Algebra_2_Logo.png?raw=true)
+![Manim Algebra 2 Logo](https://github.com/zulujive/algebra2/blob/master/Manim_Algebra_2_Logo_black-to-gray.png?raw=true)
 
 This project is the start of a full **Algebra 2 curriculum** built with **Manim** and **Manim Slides**. Each lesson presentation is intended to live in its own Python file and can be rendered/exported independently.
 

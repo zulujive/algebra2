@@ -8,6 +8,9 @@ The repository currently includes a quadratic formula lesson:
 - scene class: `QuadraticFormulaDeck`
 - pre-rendered slideshow: `quadratic_formula_deck.html`
 
+## Project Purpose and Motivations
+Current solutions for teaching math through slideshow lectures do *not* effectively teach students the mechanics and intuition needed to be successful in their subject. This project addresses that by providing a number of mini-lesson slideshows that teach through visual intuition and beautiful animations using the Manim engine inspired by the work of Grant Sanderson at [3Blue1Brown](https://www.3blue1brown.com/). We believe that the best type of learning happens when students can see manipulations to variables in realtime and how that works, exactly. We're also working with educators to improve and add to the project in order to give teachers what they need. We hope this is just the beginning of this effort and that new classes are added to achieve our mission in creating the best math lesson toolkit available.
+
 ## Pre-rendered slideshows
 
 Lessons have already been rendered and exported to HTML and can be opened directly in a browser without rendering first. This is the easiesst way to present slideshows.

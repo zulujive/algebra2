@@ -2,7 +2,7 @@
 
 ![Manim Algebra 2 Logo](https://github.com/zulujive/algebra2/blob/master/Manim_Algebra_2_Logo_black-to-gray.png?raw=true)
 
-![Static Badge](https://img.shields.io/badge/Currently%20Maintained-brightgreen) ![Static Badge](https://img.shields.io/badge/In%20Development-yellow) ![GitHub Repo stars](https://img.shields.io/github/stars/zulujive/algebra2?style=flat) ![GitHub watchers](https://img.shields.io/github/watchers/zulujive/algebra2?style=flat)
+![Static Badge](https://img.shields.io/badge/Currently%20Maintained-brightgreen) ![Static Badge](https://img.shields.io/badge/In%20Development-yellow) ![GitHub Repo stars](https://img.shields.io/github/stars/zulujive/algebra2?style=flat) ![GitHub watchers](https://img.shields.io/github/watchers/zulujive/algebra2?style=flat) ![GitHub License](https://img.shields.io/github/license/zulujive/algebra2)
 
 This project is the start of a full **Algebra 2 curriculum** built with **Manim** and **Manim Slides**. Each lesson presentation is intended to live in its own Python file and can be rendered/exported independently.
 

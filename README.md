@@ -1,21 +1,98 @@
-# Quadratic Formula Slides
+# Algebra 2 Manim Slides
 
-A Manim Slides presentation about solving quadratic equations with the quadratic formula.
+This project is the start of a full **Algebra 2 curriculum** built with **Manim** and **Manim Slides**. Each lesson presentation is intended to live in its own Python file and can be rendered/exported independently.
 
-## Render the deck
+The repository currently includes a quadratic formula lesson:
+
+- source file: `quadratic_formula_slides.py`
+- scene class: `QuadraticFormulaDeck`
+- pre-rendered slideshow: `quadratic_formula_deck.html`
+
+## Pre-rendered slideshows
+
+Lessons have already been rendered and exported to HTML and can be opened directly in a browser without rendering first. This is the easiesst way to present slideshows.
+
+Current pre-rendered slideshow files:
+
+- `quadratic_formula_deck.html`
+
+These HTML exports use Reveal.js and automatically scale to the browser window. We __**highly**__ recommend that you use the pre-rendered files instead of rendering them yourself. This project is not designed for a streamlined rendering process and attempting it on your machine may be difficult.
+
+## Install dependencies
 
 ```bash
 uv sync
+```
+
+## Render and export a slide deck
+
+Each slide deck has two important names:
+
+1. the Python source file
+2. the Manim Slides scene class inside that file
+
+General pattern:
+
+```bash
+uv run manim-slides render --quality h <deck_file.py> <SceneClass>
+uv run manim-slides convert <SceneClass> <output_file.html>
+```
+
+For the current quadratic formula deck:
+
+```bash
 uv run manim-slides render --quality h quadratic_formula_slides.py QuadraticFormulaDeck
 uv run manim-slides convert QuadraticFormulaDeck quadratic_formula_deck.html
 ```
 
-The HTML export uses Reveal.js and scales to the browser window automatically. The render command uses Manim's `h` quality preset, which produces 1920×1080 source assets for crisp projection. If you know the target display is higher resolution, Manim also supports `--quality p` for 2560×1440 and `--quality k` for 3840×2160.
+### Render quality
 
-The deck covers:
+Use `--quality h` for final classroom-ready output. It produces **1920×1080 at 60 fps**, which is the recommended baseline for crisp projection.
+
+Useful Manim quality presets:
+
+- `--quality l` → fast draft render, 854×480 at 15 fps
+- `--quality h` → recommended final render, 1920×1080 at 60 fps
+- `--quality p` → 2560×1440 at 60 fps
+- `--quality k` → 3840×2160 at 60 fps
+
+Use low quality while iterating, then re-render at high quality before exporting the final HTML slideshow.
+
+## Presentation controls for HTML slideshows
+
+When presenting a pre-rendered HTML slideshow in the browser:
+
+| Key | Action |
+| --- | --- |
+| `←` / `→` | Move backward or forward through the slides |
+| `f` | Enter fullscreen |
+| `Esc` | Exit fullscreen (if in fullscreen)|
+| `v` | Hide the slideshow / reveal it again |
+| `Esc` | Open the slideshow index when not in fullscreen |
+| `o` | Open the slideshow index while in fullscreen |
+
+Notes:
+
+- The arrow keys are the main navigation controls during teaching.
+- `v` is useful when you want to temporarily blank the projected content while discussing something off-slide.
+- The slideshow index gives an overview of the presentation and lets you jump to a different slide section quickly.
+
+## Current deck contents
+
+The quadratic formula lesson covers:
+
 - what it means to solve a quadratic
 - how solutions appear as x-intercepts on a graph
-- what `a`, `b`, and `c` do to the parabola
+- what `a`, `b`, and `c` do to a parabola
 - how the discriminant predicts the number of real roots
+- teacher-controlled pauses for discussing discriminant cases
 - an animated derivation of the quadratic formula by completing the square
 - worked examples, a repeatable solving routine, and practice questions
+
+## Notes for contributors and AI agents
+
+For detailed project conventions, lesson-design philosophy, workflows, quality expectations, and future expansion guidance, see:
+
+```text
+CONTEXT.md
+```

@@ -12,6 +12,12 @@ The repository currently includes a quadratic formula lesson:
 - scene class: `QuadraticFormulaDeck`
 - pre-rendered slideshow: `quadratic_formula_deck.html`
 
+It also includes an imaginary-solutions lesson:
+
+- source file: `imaginary_solutions_slides.py`
+- scene class: `ImaginarySolutionsDeck`
+- pre-rendered slideshow: `imaginary_solutions_deck.html`
+
 ## Project Purpose and Motivations
 Current solutions for teaching math through slideshow lectures do *not* effectively teach students the mechanics and intuition needed to be successful in their subject. This project addresses that by providing a number of mini-lesson slideshows that teach through visual intuition and beautiful animations using the Manim engine inspired by the work of Grant Sanderson at [3Blue1Brown](https://www.3blue1brown.com/). We believe that the best type of learning happens when students can see manipulations to variables in realtime and how that works, exactly. We're also working with educators to improve and add to the project in order to give teachers what they need. We hope this is just the beginning of this effort and that new classes are added to achieve our mission in creating the best math lesson toolkit available.
 
@@ -22,6 +28,7 @@ Lessons have already been rendered and exported to HTML and can be opened direct
 Current pre-rendered slideshow files:
 
 - `quadratic_formula_deck.html`
+- `imaginary_solutions_deck.html`
 
 These HTML exports use Reveal.js and automatically scale to the browser window. We __**highly**__ recommend that you use the pre-rendered files instead of rendering them yourself. This project is not designed for a streamlined rendering process and attempting it on your machine may be difficult.
 
@@ -61,6 +68,13 @@ For the current quadratic formula deck:
 ```bash
 uv run manim-slides render --quality h quadratic_formula_slides.py QuadraticFormulaDeck
 uv run manim-slides convert QuadraticFormulaDeck quadratic_formula_deck.html
+```
+
+For the imaginary-solutions deck:
+
+```bash
+uv run manim-slides render --quality h imaginary_solutions_slides.py ImaginarySolutionsDeck
+uv run manim-slides convert ImaginarySolutionsDeck imaginary_solutions_deck.html
 ```
 
 ### Render quality
@@ -106,6 +120,15 @@ The quadratic formula lesson covers:
 - teacher-controlled pauses for discussing discriminant cases
 - an animated derivation of the quadratic formula by completing the square
 - worked examples, a repeatable solving routine, and practice questions
+
+The imaginary-solutions lesson covers:
+
+- why `i` is needed and how it is defined
+- how to pull a negative out of a square root as `√(-1)=i`
+- repeated numeric examples such as `√(-16)=4i`
+- how `x² + 1` gains solutions once we allow one extra imaginary axis
+- why the `±` creates paired imaginary answers
+- animated worked examples, student practice, and walkthrough solutions
 
 ## Notes for contributors and AI agents
 

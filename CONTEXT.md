@@ -424,6 +424,33 @@ Before declaring a deck finished, check all of the following:
 - no worked examples feel cramped
 - all text remains readable at projected scale
 
+### Layout lessons learned from later deck cleanup
+
+Several real issues appeared while polishing `imaginary_solutions_slides.py`. Future contributors should treat these as common failure modes, not one-off accidents:
+
+- **Always inspect the longest content, not just the average case.** A row such as `\sqrt{-50}=\sqrt{25}\sqrt{2}\sqrt{-1}=5\sqrt{2}i` may collide with a nearby card even when the shorter examples above it look fine. If one line is much longer than the others, scale or shift the whole group deliberately rather than assuming a layout that works for the first two lines works for the third.
+- **Side-by-side graphs need more separation than expected once labels are added.** Two graph regions can technically fit while their titles, root labels, captions, or explanatory bridge text still overlap. When placing multiple graphs on one slide, budget space for every annotation, not just the axes themselves.
+- **Top labels can collide with nearby visuals even when the slide feels spacious.** In the imaginary-solutions quadratic-formula example, `a=1, b=4, c=13` overlapped the top-left of a graph. Keep coefficient lines, legends, and graph labels out of each other's bounding boxes; horizontal relocation is often cleaner than shrinking everything.
+- **Text rendering choice matters.** Plain `Text(...)` can produce ugly spacing when a long sentence is compressed into a narrow footer or when multiple fragments are packed too tightly. For math-adjacent typography, `MathTex(r"\text{...}")` may render more consistently, or split text into shorter intentionally spaced pieces.
+- **Do not trust conceptual correctness as a proxy for visual correctness.** A slide can be mathematically right and still be presentation-wrong if a box corner is touched, labels crowd each other, or typography looks accidental.
+
+### Recommended visual verification workflow
+
+After any nontrivial layout change:
+
+1. Render a low-quality development version.
+2. Inspect the actual rendered slide frames, especially the densest final states after all animations have appeared.
+3. For long decks, export representative stills or a contact sheet and then inspect suspicious slides individually at larger size.
+4. Re-run the final high-quality render only after those visual checks pass.
+5. Regenerate the HTML export after the final render so the exported deck picks up the corrected slide assets.
+
+This matters because some problems only become obvious in rendered output:
+
+- cards that look acceptable in code but are too close in the image
+- graph labels that collide only after a later animation stage
+- footer text that technically fits but reads as visually broken
+- low-quality exports accidentally being mistaken for final output
+
 ### Animation
 
 - symbolic motion teaches something concrete

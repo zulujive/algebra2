@@ -17,13 +17,24 @@ Current solutions for teaching math through slideshow lectures do *not* effectiv
 
 ## Pre-rendered slideshows
 
-Lessons have already been rendered and exported to HTML and can be opened directly in a browser without rendering first. This is the easiesst way to present slideshows.
+Lessons have already been rendered and exported to HTML and can be opened directly in a browser without rendering first. This is the easiest way to present slideshows.
 
 Current pre-rendered slideshow files:
 
 - `quadratic_formula_deck.html`
 
 These HTML exports use Reveal.js and automatically scale to the browser window. We __**highly**__ recommend that you use the pre-rendered files instead of rendering them yourself. This project is not designed for a streamlined rendering process and attempting it on your machine may be difficult.
+
+To use the HTML presentations, download the repo or clone it with:
+```bash
+git clone https://github.com/zulujive/algebra2.git
+```
+
+Then open the HTML slideshow of your choice. Work is being done to have a plug-and-play single-HTML download that references the animation files on GitHub.
+
+### IMPORTANT
+
+Currently, it is *not* possible to simply download a standalone HTML file because the animations are sourced from the host machine. You **must** download the *full* repo for the presentations to work.
 
 ## Install dependencies
 

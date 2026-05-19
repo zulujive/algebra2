@@ -322,8 +322,9 @@ class ImaginarySolutionsDeck(Slide):
             Text("5. Remember that ± gives the two answers.", font_size=24, color=TEXT),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.28)
         self.clear_to(heading)
-        self.play(LaggedStart(*[FadeIn(line, shift=RIGHT * 0.18) for line in routine], lag_ratio=0.15))
-        self.next_slide()
+        for line in routine:
+            self.play(Write(line), run_time=0.85)
+            self.next_slide()
 
         # Slide 12: student practice
         heading = self.title("11. Try these yourself")
